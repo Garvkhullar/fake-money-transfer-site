@@ -4,7 +4,7 @@ const session = require('express-session');
 const User = require('./usermodel');
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/fakebank');
+mongoose.connect('mongodb+srv://<username>:<password>@cluster0.mongodb.net/Fakebank?retryWrites=true&w=majority');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
