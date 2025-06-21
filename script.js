@@ -8,7 +8,7 @@ const app = express();
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  family: 4, // 🔥 This fixes the DNS SRV error
+  family: 4, //  This fixes the DNS SRV error
 });
 
 
