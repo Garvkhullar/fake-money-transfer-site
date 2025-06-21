@@ -4,7 +4,8 @@ const session = require('express-session');
 const User = require('./usermodel');
 const app = express();
 
-mongoose.connect('mongodb+srv://<username>:<password>@cluster0.mongodb.net/Fakebank?retryWrites=true&w=majority');
+require('dotenv').config();
+mongoose.connect(process.env.MONGO_URI);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
