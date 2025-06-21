@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  min-width: 250px;
+  flex: 1;
+  max-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+input,
+select {
+  background-color: white;
+  color: black;
+}
+
+button {
+  background-color: aqua;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.form-row {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  .form-row > * {
+    flex: 1;
+    margin: 0 5px;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row select,
+.form-row input,
+.form-row button {
+  width: 100%;
+}
+
+form button[type="submit"] {
+  margin-top: 10px;
+}
+
+form[action="/logout"] button {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  padding: 12px;
+  margin-top: 15px;
+  max-width: 600px;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .form-row select,
+  .form-row input,
+  .form-row button {
+    flex: 1;
+    max-width: none;
+  }
+
+  .form-row select,
+  .form-row input {
+    margin-right: 10px;
+  }
+
+  .form-row button {
+    margin-right: 0;
+  }
+}
