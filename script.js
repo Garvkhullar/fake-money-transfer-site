@@ -5,7 +5,7 @@ const session = require('express-session');
 const User = require('./usermodel');
 const app = express();
 
-mongoose.connect('mongodb+srv://garvkhullar:HflicMnT6FCO2Hf9@fakemoneytransfer.iqcqmvl.mongodb.net/?retryWrites=true&w=majority&appName=fakemoneytransfer&directConnection=true');
+mongoose.connect('mongodb://garvkhullar:HflicMnT6FCO2Hf9@fakemoneytransfer.iqcqmvl.mongodb.net:27017/?retryWrites=true&w=majority')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
