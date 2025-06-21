@@ -5,7 +5,12 @@ const session = require('express-session');
 const User = require('./usermodel');
 const app = express();
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  family: 4, // 🔥 This fixes the DNS SRV error
+});
+
 
 
 app.use(express.urlencoded({ extended: true }));
