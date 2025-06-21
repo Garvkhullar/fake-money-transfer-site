@@ -5,7 +5,7 @@ const User = require('./usermodel');
 const app = express();
 
 require('dotenv').config();
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect('mongodb+srv://garvkhullar:HflicMnT6FCO2Hf9@fakemoneytransfer.iqcqmvl.mongodb.net/?retryWrites=true&w=majority&appName=fakemoneytransfer');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
